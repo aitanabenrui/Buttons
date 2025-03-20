@@ -32,3 +32,9 @@ document.querySelectorAll('button').forEach(button => {  //porfavor, recuerda ha
 });
 
 //uso de clearTimeout: cancela el temporizador, evitando que el popup se muestre si el usuario ya ha interactuado
+
+const card = document.querySelector('.card'); // Asegúrate de tener esta clase en tu HTML
+// Evitar que el popup se cierre si se hace clic dentro de la card
+card.addEventListener('click', (event) => {
+    event.stopPropagation(); // Detiene la propagación del evento al popup
+});
