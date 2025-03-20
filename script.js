@@ -23,7 +23,7 @@ yesButton.addEventListener('click', ()=>{
         document.querySelector('#popup').style.display = '';
 } );
 
-document.querySelectorAll('button').forEach(button => {
+document.querySelectorAll('button').forEach(button => {  //porfavor, recuerda hacer un forEach cuando uses querySelectorAll
     if (!button.closest('#popup')) { // Excluir los botones dentro del popup, closest es un método de los elementos del DOM que permite buscar el ancestro más cercano que coincida con un selector CSS.
         button.addEventListener('click', () => {
             document.querySelector('#popup').style.display = 'flex';
