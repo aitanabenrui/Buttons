@@ -36,5 +36,5 @@ document.querySelectorAll('button').forEach(button => {  //porfavor, recuerda ha
 const card = document.querySelector('.card'); // Asegúrate de tener esta clase en tu HTML
 // Evitar que el popup se cierre si se hace clic dentro de la card
 card.addEventListener('click', (event) => {
-    event.stopPropagation(); // Detiene la propagación del evento al popup
+    event.stopPropagation(); // Detiene la propagación del evento al popup . 
 });
