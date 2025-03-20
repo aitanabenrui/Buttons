@@ -1,0 +1,80 @@
+ /* estas son las variables que usaremos posteriormente para el css de los botones */
+
+:root {
+    /* colores */
+    --color-blue: hsl(213, 100%, 56%);
+    --color-blue-light: hsl(213, 100%, 65%);
+    --color-blue-dark: hsl(213, 92%, 41%);
+    --color-blue-very-dark: hsl(215, 64%, 9%);
+    --color-purple: hsl(257, 65%, 51%);
+    --color-grey: hsl(0, 0%, 90%);
+    --color-white: hsl(0, 0%, 100%);
+  
+    /* espaciado */
+    --space-10: 10px;
+    --space-12: 12px;
+    --space-20: 20px;
+    --space-25: 25px;
+    --space-36: 36px;
+    --space-40: 40px;
+    --space-52: 52px;
+  
+    /* Layouts */
+    --border-radius-10: var(--space-10);
+    --border-radius-20: var(--space-20);
+    --border-radius-40: var(--space-40);
+    --border-width-2: 2px;
+  
+    /* fuentes y tipografías */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-size-18: 18px;
+    --font-size-30: 30px;
+    --font-size-50: 50px;
+    --font-family-body: 'Poppins', sans-serif;
+  
+    --font-line-height-120: 120%;
+    --font-line-height-145: 145%;
+    --font-line-height-165: 165%;
+  
+    --text-color-main: var(--color-blue-very-dark);
+    --text-color-secondary: var(--color-purple);
+  
+    /* botones */
+    --button-color-main: var(--color-blue);
+    --button-color-light: var(--color-blue-light);
+  
+    /* cursor */
+    --cursor-not-allowed: not-allowed;
+    --cursor-pointer: pointer;
+  
+    /* margenes */
+    --bottom-margin-36: var(--space-36);
+    --right-margin-20: var(--space-20);
+  
+    /* Gap */
+    --gap-small-20: var(--space-20);
+    --gap-medium-25: var(--space-25);
+    --gap-regular-36: var(--space-36);
+    /* Com més sucre més dolç: como puedes ver he creado cust.prop. para gap, pero para padding uso directamente las cust.prop. de spacing, haz lo que veas mas conveniente. */
+  }
+  
+  @media screen and (width > 400px) {
+    :root {
+      --margin-bottom: var(--space-60);
+    }
+  }
+  /* 
+  Este ejemplo del media query sirve para ver como podríamos hacer esto responsive, redefiniendo una custom property de CSS para una pantalla más pequeña y utizando otra custom property como su nuevo valor.
+  */
+  
+  body {
+    background-color: var(--bg, var(--bg-body));
+  }
+  /* 
+  Este ejemplo sirve para ver como usar el fallback de las custom properties. Lo que va tras la coma es el valor que se adopta si la custom property a su izquierda no existe. Vemos que, como es otra variable para habilitarla tenemos que volver a utilizar var(--x).
+  
+  Si <body style="--bg: red"> entonces tomaria esa variable y se pondría rojo el fondo. Pero si la quitamos del HTML, intentaría tomar
+  --bg-body, que ahora no existe porque la he borrado.
+   */
