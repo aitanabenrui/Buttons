@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.sidebar {
+    display:flex;
+    flex-direction:column;
+    background-color: #081425;
+    width: 300px;
+    height: 100vh;
+    padding: 3rem;
+    position: relative;
+}
+
+.course-list {
+    color:aliceblue;
+    padding-top: 90px;
+}
+
+.tag {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    border-radius: 1.2rem;
+    inset: auto 0 0 0;
+    margin: 2px;
+    background-color: #1d314d;
+    width: calc(100%-4px);
+    height: 80px;
+}
+
+/* flex, flex direction column y flex 1 al nav  */
+
+.tag--top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 1rem;
+    margin: 2px;
+    background-color: #1d314d;
+    width: calc(100% - 4px);
+    height: 80px;
+}
+
+.profile-image {
+    margin-left: 1rem;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(255, 255, 255); /* O el color que prefieras */
+    border-radius: 1.2rem; /* Para que parezca una imagen de perfil */
+}
+
+.tag--text {
+    display: flex; 
+    flex-direction: column;
+    margin: 0;
+    padding: 0;  /* Asegura que no haya padding extra */
+    color: white;
+}
+
+.tag--text h6, 
+.tag--text p {
+    margin-left: 1rem;
+    padding: 0;
+    margin-block:0;
+}
+
+.tag--text h6 {
+    font-size: 18px;
+}
