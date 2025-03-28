@@ -59,3 +59,7 @@ body {
     margin: 0 0 var(--bottom-margin-36) 0;
 }
 
+.random {
+    color: red;
+}
+
